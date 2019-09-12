@@ -25,9 +25,11 @@
 
 <body>
   <div  id="app" class="blue">
-    {{ message }} <span id="item1">アイテム1</span>
     <p>
-        {{ message }} <button v-on:click="reverseMessage">アイテム2</button>
+    こたえ　{{ result }}
+    </p>
+    <p>
+       <input v-model="var">
     </p>
   </div>
 
@@ -37,12 +39,8 @@
   var app = new Vue({
     el: '#app',
     data: {
-      message: 'Hello Vue!'
+      result: 10-var
     },
-    methods: {
-      reverseMessage: function () {
-        this.message = this.message.split('').reverse().join('')
-      }
     }
   })
   </script>
