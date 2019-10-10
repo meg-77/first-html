@@ -24,12 +24,12 @@
 </head>
 
 <body>
-  <div  id="app" class="blue">
-    <p>
-    こたえ　{{var}}
-    </p>
+  <div id="app" class="blue">
     <p>
        <input v-model="var">
+    </p>
+    <p>
+    こたえ　{{result}}
     </p>
   </div>
 
@@ -39,8 +39,11 @@
   var app = new Vue({
     el: '#app',
     data: {
-      var: 0
+      var: 0,
     },
+    result: function() {
+      return this.var + 10
+    }
     }
   })
   </script>
